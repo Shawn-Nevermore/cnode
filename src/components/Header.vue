@@ -33,53 +33,61 @@ export default {
 
 <style lang="stylus" scoped>
 .header
-  background #444
-  width 100%
-  position fixed
-  top 0
-  left 0
-  font-size 13px
-  .header-inner
-    display flex
-    justify-content space-between
-    align-items center
-    /*width 10%*/
-    max-width 1400px
-    min-width 960px
-    min-height 40px
-    margin auto
-    padding 5px
-    .header-inner-left
-      display flex
-      align-items center
-      .brand
-        width 120px
-        height 34px
-        line-height 34px
-        padding 3px 20px
-        img
-          max-width 100%
-      .header-search
-        .header-search-query
-          background: #888 url(../assets/search.e53b380a.hashed.png) no-repeat 4px center
-          border 0
-          padding: 5px 10px 5px 26px
-          width: 233px
-          border-radius: 10em
-          transition: all .5s
-          &:focus, &:hover
-            width: 333px
-            background-color: #fff
-    .header-inner-right
-      .list
-        list-style none
+    background #444
+    width 100%
+    position fixed
+    top 0
+    left 0
+    font-size 13px
+
+    .header-inner
         display flex
-        margin 0
-        li
-          padding 10px 15px
-          a
-            &:hover
-              color #fff
-            text-decoration none
-            color #ccc
+        justify-content space-between
+        align-items center
+        /*width 10%*/
+        max-width 1400px
+        min-width 960px
+        min-height 40px
+        margin auto
+        padding 5px
+
+        .header-inner-left
+            display flex
+            align-items center
+
+            .brand
+                width 120px
+                height 34px
+                line-height 34px
+                padding 3px 20px
+
+                img
+                    max-width 100%
+
+            .header-search
+                .header-search-query
+                    background: #888 url(../assets/search.e53b380a.hashed.png) no-repeat 4px center
+                    border 0
+                    padding: 5px 10px 5px 26px
+                    width: 233px
+                    border-radius: 10em
+                    transition: all .3s
+
+                    &:focus, &:hover
+                        width: 333px
+                        background-color: #fff
+
+        .header-inner-right
+            .list
+                list-style none
+                display flex
+                margin 0
+
+                li
+                    padding 10px 15px
+                    a
+                        &:hover
+                            color #fff
+                        text-decoration none
+                        color #ccc
 </style>

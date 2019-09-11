@@ -20,10 +20,11 @@ export default {
 
 <style lang="stylus" scoped>
 .main
-    width: 100%
+    width: 90%
     max-width: 1400px
     min-width: 960px
     margin: 65px auto
     min-height: 400px
     display: flex
+    justify-content: center
 </style>

@@ -7,9 +7,7 @@
         </router-link>
 
         <form class="header-search" action="">
-          <label>
-            <input class="header-search-query" type="text" />
-          </label>
+          <input class="header-search-query" type="search" />
         </form>
       </div>
 
@@ -41,53 +39,42 @@ export default {
   top 0
   left 0
   font-size 13px
-
   .header-inner
     display flex
     justify-content space-between
     align-items center
-    width 90%
+    /*width 10%*/
     max-width 1400px
     min-width 960px
     min-height 40px
     margin auto
     padding 5px
-
     .header-inner-left
       display flex
       align-items center
-
       .brand
         width 120px
         height 34px
         line-height 34px
         padding 3px 20px
-
         img
           max-width 100%
-
       .header-search
-        width 233px
-        line-height 40px
-
         .header-search-query
-          &:hover
-          &:focus
-            background: #fff
-          background url(/src/assets/search.e53b380a.hashed.png) 4px 4px no-repeat #888
-          width 206px
-          padding 5px 5px 5px 22px
-          border-radius 15px
+          background: #888 url(../assets/search.e53b380a.hashed.png) no-repeat 4px center
           border 0
-          color #666
+          padding: 5px 10px 5px 26px
+          width: 233px
+          border-radius: 10em
           transition: all .5s
-
+          &:focus, &:hover
+            width: 333px
+            background-color: #fff
     .header-inner-right
       .list
         list-style none
         display flex
         margin 0
-
         li
           padding 10px 15px
           a

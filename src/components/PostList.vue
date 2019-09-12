@@ -37,9 +37,9 @@
           <div class="rightPart">
             <!--最后更新时间 -->
             <span class="last_time">
-              <button @click="getAvatar(post.id)" :key="post.id">GET</button>
-              <img :src="reply_avatar" />
-              <span class="last_active_time">{{ post.create_at }}</span>
+<!--              <button @click="getAvatar(post.id)" :key="post.id">GET</button>-->
+              <img :src="reply_avatar" alt="头像"/>
+              <span class="last_active_time">{{ post.last_reply_at | formatDate }}</span>
             </span>
           </div>
         </li>
@@ -108,7 +108,7 @@ export default {
             color: #778087
         .topic_list
             list-style: none
-            padding 0
+            padding 0   /*清除默认Padding*/
             .cell
                 &:hover
                     background: #f5f5f5
@@ -119,12 +119,13 @@ export default {
                 align-items: center
                 border-top 1px solid #f5f5f5
                 padding: 10px
-                line-height 2rem
-                text-overflow ellipsis
                 .leftPart
-                    text-overflow ellipsis
-                    flex: auto
+                    border:1px solid green
+                    width: 70%
+                    padding-right 20px
                     display: flex
+                    align-items: center
+                    /*height: 30px*/
                     .avatar
                         img
                             width: 30px
@@ -140,20 +141,35 @@ export default {
                             font-size: 10px
                             color: #b4b4b4
                     .title
-                        overflow: hidden
-                        text-overflow ellipsis
-                        &:hover
-                            text-decoration underline
+                        border: 1px solid red
+
+                        width 100%
                         a
+                            border 1px solid blue
+                            &:hover
+                                text-decoration underline
+                            &:visited
+                                color: #888
+                            padding 0
+                            color: #333
+                            max-width: 70%
                             text-overflow ellipsis
+                            white-space: nowrap
+                            font-size: 16px
+                            display: block
+                            overflow: hidden
 
                 .rightPart
-                    flex: none
+                    vertical-align middle
                     .last_time
+                        min-width: 70px
                         align-self: flex-end
                         img
                             width: 20px
+                            background: #000
                         .last_active_time
+                            font-size 11px
+                            color #778087
                             text-align: right
                             white-space: nowrap
                             min-width: 50px

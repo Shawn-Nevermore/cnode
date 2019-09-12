@@ -27,4 +27,6 @@ export default {
     min-height: 400px
     display: flex
     justify-content: center
+    font-size 14px
+    /*color: #333*/
 </style>

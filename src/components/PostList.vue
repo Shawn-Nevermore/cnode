@@ -18,9 +18,7 @@
         <li class="cell" v-for="post in posts" :key="post.id">
           <div class="leftPart">
             <!--头像-->
-            <span class="avatar">
-              <a href="#"><img :src="post.author.avatar_url" alt=""/></a>
-            </span>
+            <a class="avatar" href="#"><img :src="post.author.avatar_url" alt="头像"/></a>
 
             <!--回复数/点击数-->
             <span class="reply_visit_count">
@@ -28,17 +26,19 @@
               <span class="count_seperator">/</span>
               <span class="visit_count">{{ post.visit_count }}</span>
             </span>
-
-            <!--标题-->
-            <span class="title">
-              <a :href="post.title">{{ post.title }}</a>
-            </span>
           </div>
+
+            <span class="topic_list_tab">置顶</span>
+            <!--标题-->
+            <div class="topic_title_wrapper">
+              <a class="topic_title" :href="post.title">{{ post.title }}</a>
+            </div>
+
           <div class="rightPart">
             <!--最后更新时间 -->
             <span class="last_time">
 <!--              <button @click="getAvatar(post.id)" :key="post.id">GET</button>-->
-              <img :src="reply_avatar" alt="头像"/>
+              <img :src="reply_avatar" alt=""/>
               <span class="last_active_time">{{ post.last_reply_at | formatDate }}</span>
             </span>
           </div>
@@ -120,18 +120,16 @@ export default {
                 border-top 1px solid #f5f5f5
                 padding: 10px
                 .leftPart
-                    border:1px solid green
-                    width: 70%
-                    padding-right 20px
+                    width: 100px
                     display: flex
                     align-items: center
-                    /*height: 30px*/
                     .avatar
+                        display: flow-root
                         img
                             width: 30px
-                            height: 30px
+                            border-radius: 3px
                     .reply_visit_count
-                        min-width: 80px
+                        width: 70px
                         text-align center
                         .reply_count
                             color: #9e78c0
@@ -140,38 +138,48 @@ export default {
                         .visit_count
                             font-size: 10px
                             color: #b4b4b4
-                    .title
-                        border: 1px solid red
 
-                        width 100%
-                        a
-                            border 1px solid blue
-                            &:hover
-                                text-decoration underline
-                            &:visited
-                                color: #888
-                            padding 0
-                            color: #333
-                            max-width: 70%
-                            text-overflow ellipsis
-                            white-space: nowrap
-                            font-size: 16px
-                            display: block
-                            overflow: hidden
+                .topic_list_tab
+                  background: #e5e5e5
+                  color: #999
+                  padding: 2px 4px
+                  margin: 0 5px
+                  border-radius: 3px
+                  font-size: 12px
+
+                .topic_title_wrapper
+                    display: flow-root
+                    flex: 1
+                    white-space: nowrap
+                    max-width: 752.5px
+                    .topic_title
+                        &:hover
+                            text-decoration underline
+                        &:visited
+                            color: #888
+                        color: #333
+                        width: 70%
+                        text-overflow ellipsis
+                        white-space: nowrap
+                        font-size: 16px
+                        display: block
+                        overflow: hidden
 
                 .rightPart
+                    flex: none
                     vertical-align middle
+
                     .last_time
+                        display: flow-root
                         min-width: 70px
-                        align-self: flex-end
                         img
                             width: 20px
                             background: #000
                         .last_active_time
+                            display: inline-block
+                            min-width: 50px
                             font-size 11px
                             color #778087
                             text-align: right
                             white-space: nowrap
-                            min-width: 50px
-                            display: inline-block
 </style>

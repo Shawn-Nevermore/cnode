@@ -56,9 +56,9 @@ export default {
             align-items center
 
             .brand
-                width 120px
-                height 34px
-                line-height 34px
+                width 160px
+                height 40px
+                line-height 40px
                 padding 3px 20px
 
                 img

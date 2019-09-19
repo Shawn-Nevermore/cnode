@@ -1,5 +1,12 @@
 <template>
-  <div class="sidebar"></div>
+  <div class="sidebar">
+    siderbar <br />
+    siderbar <br />
+    siderbar <br />
+    siderbar <br />
+    siderbar
+    <br />siderbar <br />
+  </div>
 </template>
 
 <script>
@@ -11,8 +18,9 @@ export default {
 <style lang="stylus" scoped>
 .sidebar
     width: 290px
-    font-size: 14px
-    margin: 0 0 20px 15px
-    height: 100vh
-    background: green
+    float: right
+    /*margin: 0 0 20px 0*/
+    /*height: 100vh*/
+    background: #aaa
+    margin-bottom: 20px;
 </style>

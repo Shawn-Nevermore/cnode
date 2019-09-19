@@ -97,8 +97,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
+
 .postlist
-    max-width: 1095px
+    /*float: left*/
+    margin-right: 305px
+    /*max-width: 1095px*/
     .panel
         a
             text-decoration none
@@ -145,11 +149,10 @@ export default {
                     .visit_count
                         font-size: 10px
                         color: #b4b4b4
-
-
                 .last_time
                     float: right
                     margin-left: 50px
+                    line-height: 30px
                     img
                         width: 20px
                         background: #000
@@ -164,8 +167,6 @@ export default {
                     white-space: nowrap
                     .topic_list_tab
                         background: #e5e5e5
-                        line-height: 30px
-                        height: 30px
                         color: #999
                         padding: 2px 4px
                         /*margin: 0 5px*/

@@ -1,7 +1,7 @@
 <template>
-  <div class="main">
-    <PostList></PostList>
+  <div class="main clearfix">
     <SideBar></SideBar>
+    <PostList></PostList>
   </div>
 </template>
 
@@ -25,8 +25,5 @@ export default {
     min-width: 960px
     margin: 65px auto
     min-height: 400px
-    display: flex
-    justify-content: center
-    font-size 14px
-    /*color: #333*/
+    /*position: relative;*/
 </style>

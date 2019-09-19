@@ -39,6 +39,8 @@ export default {
     top 0
     left 0
     font-size 13px
+    z-index 100
+    box-shadow 0px 0px 20px 0px rgba(0, 0, 0, 0.75)
 
     .header-inner
         display flex
